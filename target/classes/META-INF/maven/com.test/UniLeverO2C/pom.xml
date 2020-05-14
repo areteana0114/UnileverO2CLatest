@@ -95,7 +95,7 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
-			<version>5.0.0</version>
+			<version>3.15.0</version>
 		</dependency>
 
 
@@ -125,7 +125,7 @@
 				<version>2.17</version>
 				<configuration>
 					<argLine>-Xmx1024m</argLine> 
-					<!-- <testFailureIgnore>true</testFailureIgnore> -->    <!-- Run from local Reports-Uncomment this if want to generate cucumber reports 
+					<!-- <testFailureIgnore>true</testFailureIgnore>  -->   <!-- Run from local Reports-Uncomment this if want to generate cucumber reports 
 						in local -->
 
 					<suiteXmlFiles>
@@ -138,7 +138,7 @@
 					</suiteXmlFiles>
 					<systemPropertyVariables> <Browser>${browserName}</Browser> <URL>${url}</URL> 
 						</systemPropertyVariables><!--  System property part Runs from jenkins -->
-					<!-- <argLine>-Dcucumber.options="-tags @Smoke_GC_Kato"</argLine> -->  <!-- Run from local for single scenario execution original syntax is -Dcucumber.options=" 
+					<!-- <argLine>-Dcucumber.options="-tags @GC_Kato_TC1"</argLine>  --> <!-- Run from local for single scenario execution original syntax is -Dcucumber.options=" 
 						two hyphens tags @Test3,@Test1" -->
 				</configuration>
 			</plugin>
@@ -146,7 +146,7 @@
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>5.0.0</version>
+				<version>3.15.0</version>
 				<executions>
 					<execution>
 						<id>execution</id>
@@ -156,8 +156,8 @@
 						</goals>
 						<configuration>
 							<projectName>UniLeverO2C</projectName>
-							<outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
-							<cucumberOutput>${project.build.directory}/cucumber-report/cucumber.json</cucumberOutput>
+							<outputDirectory>target/site/cucumber-reports</outputDirectory>
+							<cucumberOutput>target/cucumber-report/cucumber.json</cucumberOutput>
 
 
 							<!-- <checkBuildResult>true</checkBuildResult> -->   <!-- Run from local to generate Reports-uncomment this only when to generate 
